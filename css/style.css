@@ -40,19 +40,20 @@
   --basic-extra-brown: #503E33;
   --basic-dark-brown: #604E43;
   --basic-brown: #766357;
+
+  --special-light: rgba(255, 255, 255, 0.9);
+  --special-dark: rgba(0, 1, 1, 0.2);
 }
 
 /* Global */
 
-.page {
+.page-body {
   margin: 0 40px;
   padding: 0;
   background-color: var(--basic-gray);
 }
 
-.page-body {
-  position: absolute;
-  top: 0;
+.container {
   min-width: 1200px;
   margin: 0;
   padding: 0;
@@ -63,10 +64,10 @@
   color: var(--basic-extra-dark);
   text-transform: uppercase;
   background-color: var(--basic-white);
-  box-shadow: 0px 5px 15px rgba(0, 1, 1, 0.2);
+  box-shadow: 0px 5px 15px var(--special-dark);
 }
 
-.decoration {
+a {
   text-decoration: none;
 }
 
@@ -89,6 +90,7 @@
 
 .site-navigation {
   list-style: none;
+  margin: 0;
 }
 
 .site-navigation a {
@@ -108,6 +110,10 @@
   color: var(--basic-brown);
 }
 
+
+/* -----Index-html----- */
+
+
 /* Greeting */
 
 .greeting {
@@ -115,20 +121,6 @@
   min-height: 509px;
   background-color: var(--basic-dark);
   background-image: url(../img/background-photo.jpg);
-}
-
-.greeting-img {
-  position: absolute;
-  margin: auto;
-  left: 0;
-  top: 0;
-  bottom: 0;
-  right: 0;
-}
-
-.greeting .greeting-decoration-img {
-  position: absolute;
-  bottom: 0;
 }
 
 /* Features */
@@ -245,10 +237,67 @@
   background-color: var(--basic-dark-gray);
 }
 
+
+/* -----Catalog----- */
+
+
+/* Hotels selection */
+
+.hotels-selection {
+  width: 100%;
+  min-height: 217px;
+  color: var(--basic-white);
+  background-image: url(../img/background.jpg);
+}
+
+.hotels-selection-list {
+  border: none;
+}
+
+.hotels-infrastructure-item {
+  font-size: 16px;
+  font-weight: 700;
+}
+
+.hotels-selection-form .option {
+  display: block;
+}
+
+.hotels-list-cost {
+  display: inline;
+  width: 317px;
+  border: 2px solid #FFFFFF;
+  box-sizing: border-box;
+  border-radius: 2px;
+}
+
+.hotels-item-cost input {
+  text-transform: uppercase;
+  color: var(--basic-white);
+  background: transparent;
+  border: none;
+}
+
+.hotels-item-cost input::placeholder {
+  text-align: center;
+  color: var(--basic-white);
+}
+
+.hotels-selection-button {
+  width: 137px;
+  height: 36px;
+  text-transform: uppercase;
+  color: var(--basic-white);
+  background: transparent;
+  border: 2px solid #FFFFFF;
+  box-sizing: border-box;
+  border-radius: 2px;
+}
+
 /* Main footer */
 
 .main-footer {
-  background: rgba(255, 255, 255, 0.9);
+  background: var(--special-light);
 }
 
 .footer-contacts {
@@ -298,6 +347,7 @@
 }
 
 .footer-copyright {
+  min-height: 41px;
   line-height: 26px;
   color: var(--basic-black);
 }
