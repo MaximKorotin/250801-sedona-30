@@ -34,30 +34,30 @@
           <fieldset class="hotels-selection-list">
             <legend class="hotels-infrastructure-item">Инфраструктура:</legend>
             <label class="option">
-              <input type="checkbox" name="swimming-pool" checked>
+              <input type="checkbox" name="infrastructure" checked>
               Бассейн
             </label>
             <label class="option">
-              <input type="checkbox" name="parking">
+              <input type="checkbox" name="infrastructure">
               Парковка
             </label>
             <label class="option">
-              <input type="checkbox" name="Wi-Fi">
+              <input type="checkbox" name="infrastructure">
               Wi-Fi
             </label>
           </fieldset>
           <fieldset class="hotels-selection-list">
             <legend class="hotels-infrastructure-item">Тип жилья:</legend>
             <label class="option">
-              <input type="checkbox" name="hotel" checked>
+              <input type="checkbox" name="housing" checked>
               Гостиница
             </label>
             <label class="option">
-              <input type="checkbox" name="motel" checked>
+              <input type="checkbox" name="housing" checked>
               Мотель
             </label>
             <label class="option">
-              <input type="checkbox" name="apartments" checked>
+              <input type="checkbox" name="housing" checked>
               Апартаменты
             </label>
           </fieldset>
@@ -65,10 +65,13 @@
             <legend class="hotels-infrastructure-item">Стоимость в сутки (Р):</legend>
             <div class="hotels-list-cost">
               <label class="hotels-item-cost">
-                <input type="text" placeholder="от 0">
+                <input type="text" name="cost" placeholder="от 0">
               </label>
+              <svg width="2" height="22">
+                <line x1="2" y1="5" x2="2" y2="22" stroke-width="4" stroke="#ffffff"></line>
+              </svg>
               <label class="hotels-item-cost">
-                <input type="text" placeholder="до 3000">
+                <input type="text" name="cost" placeholder="до 3000">
               </label>
             </div>
           </fieldset>
@@ -76,12 +79,12 @@
         </form>
       </section>
       <section class="sorting">
-        <h2>Сортировка</h2>
+        <h2 class="visually-hidden">Сортировка</h2>
         <ul class="sorting-list">
-          <li class="sorting-item">Найдено: 3</li>
+          <li class="sorting-item-found">Найдено: 3</li>
           <li class="sorting-item">Сортировка:</li>
           <li class="sorting-item">
-            <a class="sorting-item-link" href="#">По цене</a>
+            <a class="sorting-item-link" href="#" >По цене</a>
           </li>
           <li class="sorting-item">
             <a class="sorting-item-link" href="#">По типу</a>
@@ -93,69 +96,82 @@
           <!-- Иконки вывода "По возрастанию" или "По убыванию" -->
           <li class="sorting-control">
             <a class="sorting-control-link" href="#">
-              <img src="img/icons/icon-up-dir.svg" alt="Выбор по возрастанию">
+              <svg width="11" height="10" viewBox="0 0 11 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M5.5 0L0 10H11L5.5 0Z" fill="#CACACA"/>
+              </svg>
             </a>
           </li>
           <li>
             <a class="sorting-control-link" href="#">
-              <img src="img/icons/icon-down-dir.svg" alt="Выбор по убыванию">
+              <svg width="11" height="10" viewBox="0 0 11 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M5.5 10L11 0L0 0L5.5 10Z" fill="#CACACA"/>
+              </svg>
             </a>
           </li>
         </ul>
       </section>
       <section class="found-hotels">
-        <h2>Список найденных гостиниц</h2>
+        <h2 class="visually-hidden">Список найденных гостиниц</h2>
         <ul class="found-hotels-list">
           <li class="found-hotel-item">
             <img src="img/photo-1.jpg" width="135" height="90" alt="Amara Resort & Spa">
-            <h3>Amara Resort & Spa</h3>
+            <a class="hotel-name" href="#">Amara Resort & Spa</a>
             <dl class="found-hotel-items">
               <dt>Гостиница</dt>
-              <dd class="found-hotel-details"><a class="found-hotel-link" href="#">Подробнее</a></dd>
+              <dd class="found-hotel-details">
+                <a class="found-hotel-link" href="#">Подробнее</a>
+              </dd>
               <dt>От 4000 Р.</dt>
-              <dd class="found-hotel-reservation"><a class="found-hotel-link" href="#">Забронировать</a></dd>
+              <dd class="found-hotel-reservation">
+                <a class="found-hotel-link" href="#">Забронировать</a>
+              </dd>
             </dl>
-            <section class="hotel-class">
-              <h4>Класс гостиницы</h4>
-            </section>
-            <section class="hotel-rating">
-              <h4>Рейтинг:</h4>
-              <span>8,5</span>
-            </section>
+            <div class="hotel-class-1">
+              <h3 class="visually-hidden">Класс гостиницы</h3>
+            </div>
+            <div class="hotel-rating">
+              <span>Рейтинг: 8,5</span>
+            </div>
           </li>
           <li class="found-hotel-item">
             <img src="img/photo-2.jpg" width="135" height="90" alt="Desert Quail Inn">
-            <h3>Desert Quail Inn</h3>
+            <a class="hotel-name" href="#">Desert Quail Inn</a>
             <dl class="found-hotel-items">
               <dt>Мотель</dt>
-              <dd class="found-hotel-details"><a class="found-hotel-link" href="#">Подробнее</a></dd>
+              <dd class="found-hotel-details">
+                <a class="found-hotel-link" href="#">Подробнее</a>
+              </dd>
               <dt>От 3000 Р.</dt>
-              <dd class="found-hotel-reservation"><a class="found-hotel-link" href="#">Забронировать</a></dd>
+              <dd class="found-hotel-reservation">
+                <a class="found-hotel-link" href="#">Забронировать</a>
+              </dd>
             </dl>
-            <section class="hotel-class">
-              <h4>Класс гостиницы</h4>
-            </section>
-            <section class="hotel-rating">
-              <h4>Рейтинг:</h4>
-              <span>8,9</span>
-            </section>
+            <div class="hotel-class-2">
+              <h3 class="visually-hidden">Класс гостиницы</h3>
+            </div>
+            <div class="hotel-rating">
+              <span>Рейтинг: 8,9</span>
+            </div>
           </li>
           <li class="found-hotel-item">
             <img src="img/photo-3.jpg" width="135" height="90" alt="Villas at Poco Diablo">
-            <h3>Villas at Poco Diablo</h3>
+            <a class="hotel-name" href="#">Villas at Poco Diablo</a>
             <dl class="found-hotel-items">
               <dt>Апартаменты</dt>
-              <dd class="found-hotel-details"><a class="found-hotel-link" href="#">Подробнее</a></dd>
+              <dd class="found-hotel-details">
+                <a class="found-hotel-link" href="#">Подробнее</a>
+              </dd>
               <dt>От 2000 Р.</dt>
-              <dd class="found-hotel-reservation"><a class="found-hotel-link" href="#">Забронировать</a></dd>
+              <dd class="found-hotel-reservation">
+                <a class="found-hotel-link" href="#">Забронировать</a>
+              </dd>
             </dl>
-            <section class="hotel-class">
-              <h4>Класс гостиницы</h4>
-            </section>
-            <section class="hotel-rating">
-              <h4>Рейтинг:</h4>
-              <span>9,2</span>
-            </section>
+            <div class="hotel-class-3">
+              <h3 class="visually-hidden">Класс гостиницы</h3>
+            </div>
+            <div class="hotel-rating">
+              <span>Рейтинг: 9,2</span>
+            </div>
           </li>
         </ul>
       </section>
