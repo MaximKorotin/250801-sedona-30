@@ -21,13 +21,15 @@
           <li><a href="#">фото и видео</a></li>
           <li><a href="#">карта штата</a></li>
           <li><a href="catalog.html">гостиницы</a></li>
+          <li class="main-header-logo">
+            <a href="#">
+              <img src="img/logo.svg" width="138" height="70" alt="Логотип городка Седона">
+            </a>
+          </li>
         </ul>
-        <a class="main-header-logo" href="#">
-          <img src="img/logo.svg" width="138" height="70" alt="Логотип городка Седона">
-        </a>
       </nav>
     </header>
-    <main>
+    <main class="main-container">
       <h1 class="visually-hidden">Сайт небольшого городка Седона</h1>
       <section class="greeting">
         <h2 class="visually-hidden">Слоган</h2>
@@ -35,8 +37,10 @@
         <img class="greeting-decoration-img" src="img/shape.svg" width="1200" height="57" alt="">
       </section>
       <section class="features">
-        <h2>Седона — небольшой городок в Аризоне,<br> заслуживающий большего!</h2>
-        <p>Рассмотрим 5 причин, по которым Седона круче, чем гранд каньон!</p>
+        <div class="features-text">
+          <h2>Седона — небольшой городок в Аризоне,<br> заслуживающий большего!</h2>
+          <p>Рассмотрим 5 причин, по которым Седона круче, чем гранд каньон!</p>
+        </div>
         <ul class="features-list">
           <li class="feature-item">
             <h3>Настоящий городок</h3>
@@ -65,13 +69,13 @@
               </li>
             </ul>
           </li>
+          <li class="feature-item feature-item-image">
+            <img src="img/image-2.jpg" width="800" height="256" alt="Мост дьявола">
+          </li>
           <li class="feature-item">
             <h3>Там есть мост дьявола</h3>
             <span>— №2 —</span>
             <p>Да, по нему можно пройти! Если конечно вы осмелитесь</p>
-          </li>
-          <li class="feature-item feature-item-image">
-            <img src="img/image-2.jpg" width="800" height="256" alt="Мост дьявола">
           </li>
           <li class="feature-item">
             <h3>Небольшая площадь</h3>
@@ -93,7 +97,7 @@
       <section class="hotel-search">
         <h2 class="visually-hidden">Поиск гостиницы</h2>
         <span>Заинтересовались?</span>
-        <p>Укажите предполагаемые даты поездки, и мы покажем вам лучшие предложения гостиниц в седоне</p>
+        <p>Укажите предполагаемые даты поездки,<br> и мы покажем вам лучшие предложения гостиниц в седоне</p>
         <a class="hotel-search-button" href="#">
           <span class="search-button-text">Поиск гостиницы в Седоне</span>
         </a>
