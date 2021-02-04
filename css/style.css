@@ -89,7 +89,7 @@ a {
 }
 
 .main-header {
-  width: 1054px;
+  width: 100%;
   justify-self: center;
 }
 
@@ -111,6 +111,18 @@ a {
 
 .site-navigation li {
   padding: 15px 0 15px 0;
+}
+
+.site-navigation li:nth-child(1),
+.site-navigation li:nth-child(5),
+.site-navigation li:nth-child(9) {
+  padding-left: 73px;
+}
+
+.site-navigation li:nth-child(4),
+.site-navigation li:nth-child(8),
+.site-navigation li:nth-child(12) {
+  padding-right: 73px;
 }
 
 .site-navigation li:nth-child(3),
