@@ -81,12 +81,12 @@ a {
   margin: -1px;
 }
 
-/* Main navigation */
-
 .main-container {
   grid-row: 2/4;
   grid-column: 1/-1;
 }
+
+/* Main navigation */
 
 .main-header {
   width: 100%;
@@ -186,6 +186,8 @@ a {
 }
 
 .greeting .greeting-img {
+  width: 457px;
+  height: 351px;
   justify-self: center;
   align-self: center;
 }
@@ -331,7 +333,7 @@ a {
 /* Hotel search */
 
 .hotel-search {
-  padding-top: 58px;
+  padding-top: 57px;
   text-align: center;
 }
 
@@ -339,11 +341,12 @@ a {
   font-size: 30px;
   line-height: 24px;
   font-weight: 700;
+  color: var(--basic-black);
 }
 
 .hotel-search p {
   margin: 0;
-  padding: 27px 0 40px 0;
+  margin: 27px 0 45px 0;
   line-height: 24px;
 }
 
@@ -376,7 +379,7 @@ a {
 
 .map {
   max-width: 100%;
-  height: 600px;
+  height: 594px;
   background-color: var(--basic-dark-gray);
 }
 
@@ -740,23 +743,47 @@ a {
 
 .main-footer {
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
   grid-row: 3/4;
   grid-column: 1/-1;
   background: var(--special-light);
 }
 
+.main-footer-container {
+  display: flex;
+  align-items: center;
+  padding: 0 73px 0 73px;
+}
+
 .footer-contacts {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  min-width: 166px;
+  max-width: 327px;
   font-size: 21px;
   line-height: 26px;
   font-weight: 700;
 }
 
 .footer-contacts a {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  overflow: hidden;
   color: var(--basic-black);
 }
 
+.footer-contacts .footer-phone {
+  padding: 9px 0 13px 0;
+}
+
 .footer-socials-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  width: 400px;
+  margin: 0;
+  padding: 0;
   list-style: none;
 }
 
@@ -764,6 +791,11 @@ a {
   position: relative;
   width: 46px;
   height: 48px;
+  margin: 6px 6px 6px 0;
+}
+
+.footer-socials-item:last-child {
+  margin-right: 0;
 }
 
 .social-button {
@@ -793,9 +825,29 @@ a {
 }
 
 .footer-copyright {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  align-content: center;
+  width: 327px;
   min-height: 41px;
   line-height: 26px;
   color: var(--basic-black);
+}
+
+.footer-copyright p {
+  max-width: 202px;
+  margin-right: 8px;
+  overflow: hidden;
+}
+
+.footer-copyright-link {
+  display: flex;
+  flex-wrap: wrap;
+  max-width: 115px;
+  overflow: hidden;
+  margin-bottom: 5px;
 }
 
 .footer-copyright-link:hover path {
