@@ -27,6 +27,7 @@
         </a>
       </nav>
     </header>
+
     <main class="main-container">
       <h1 class="visually-hidden">Сайт небольшого городка Седона</h1>
       <section class="greeting">
@@ -101,6 +102,7 @@
         <img src="img/map.jpg" width="1200" height="594" alt="Карта с местонахождением городка Седона">
       </section>
     </main>
+
     <footer class="main-footer">
       <div class="main-footer-container">
         <section class="footer-contacts">
@@ -139,6 +141,35 @@
         </section>
       </div>
     </footer>
+
+    <section class="hotels-search-form">
+      <h2 class="visually-hidden">Форма поиска гостиницы</h2>
+      <form class="form-search" method="get" action="https://echo.htmlacademy.ru/">
+        <p>
+          <label class="arrival-date">
+            Дата заезда:
+            <input type="date" name="arrival-date" value="2017-04-24">
+          </label>
+        </p>
+        <p>
+          <label class="departure-date">
+            Дата выезда:
+            <input type="date" name="departure-date" value="2017-07-04">
+          </label>
+        </p>
+        <p>
+          <label class="adult">
+            Взрослые:
+            <input type="number" name="adult" value="2" min="0">
+          </label>
+          <label class="children">
+            Дети:
+            <input type="number" name="children" value="0" min="0">
+          </label>
+        </p>
+        <button class="hotels-search-button" type="submit">Найти</button>
+      </form>
+    </section>
   </div>
 </body>
 

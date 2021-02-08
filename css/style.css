@@ -66,7 +66,7 @@
   color: var(--basic-extra-dark);
   text-transform: uppercase;
   background-color: var(--basic-white);
-  box-shadow: 0px 5px 15px var(--special-light-darkdark);
+  box-shadow: 0px 5px 15px var(--special-light-dark);
 }
 
 a {
@@ -293,6 +293,7 @@ a {
   display: block;
   max-width: 100%;
   height: auto;
+  background-color: var(--basic-dark-gray);
 }
 
 .recommendations-list {
@@ -373,6 +374,92 @@ a {
 
 .hotel-search-button:focus .search-button-text {
   opacity: 0.3;
+}
+
+/* Hotels search form */
+
+.hotels-search-form {
+  display: none;
+  margin: 0 auto;
+  line-height: 26px;
+  font-weight: 700;
+  padding: 55px;
+  background-color: var(--basic-white);
+}
+
+.form-search {
+  width: 458px;
+  height: 285px;
+  margin: 0;
+}
+
+.hotels-search-form p {
+  margin: 0 0 35px 0;
+}
+
+.arrival-date input {
+  line-height: 26px;
+  font-weight: 700;
+  width: 322px;
+  height: 38px;
+  margin-left: 22px;
+  padding: 0 9px 0 13px;
+  background-color: var(--basic-gray);
+  border: none;
+}
+
+.departure-date input {
+  line-height: 26px;
+  font-weight: 700;
+  width: 322px;
+  height: 38px;
+  margin-left: 19px;
+  padding: 0 9px 0 13px;
+  background-color: var(--basic-gray);
+  border: none;
+}
+
+.adult {
+  margin-right: 45px;
+}
+
+.adult input {
+  line-height: 26px;
+  font-weight: 700;
+  text-align: center;
+  width: 114px;
+  height: 38px;
+  margin-left: 38px;
+  padding: 0;
+  background-color: var(--basic-gray);
+  border: none;
+}
+
+.children input {
+  line-height: 26px;
+  font-weight: 700;
+  text-align: center;
+  width: 114px;
+  height: 38px;
+  margin-left: 26px;
+  padding: 0;
+  background-color: var(--basic-gray);
+  border: none;
+  list-style: none;
+}
+
+.hotels-search-button {
+  font-size: 21px;
+  line-height: 26px;
+  font-weight: 700;
+  text-transform: uppercase;
+  width: 458px;
+  height: 58px;
+  margin-top: 8px;
+  padding: 0;
+  color: var(--basic-white);
+  background-color: var(--basic-blue);
+  border: none;
 }
 
 /* Map */
@@ -611,6 +698,7 @@ a {
 .found-hotel-image img {
   width: 135px;
   height: 90px;
+  background-color: var(--basic-dark-gray);
 }
 
 .found-hotel-item .found-hotel-items {
