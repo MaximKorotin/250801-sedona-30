@@ -34,43 +34,56 @@
         <form class="hotels-selection-form" method="get" action="https://echo.htmlacademy.ru/">
           <fieldset class="hotels-selection-list">
             <legend class="hotels-infrastructure-item">Инфраструктура:</legend>
-            <label class="option">
-              <input type="checkbox" name="infrastructure" checked>
-              Бассейн
-            </label>
-            <label class="option">
-              <input type="checkbox" name="infrastructure">
-              Парковка
-            </label>
-            <label class="option">
-              <input type="checkbox" name="infrastructure">
-              Wi-Fi
-            </label>
+            <ul class="options-list">
+              <li class="option-item">
+                <input class="visually-hidden filter-input-checkbox" id="pool" type="checkbox" name="infrastructure" checked>
+                <label for="pool">Бассейн</label>
+              </li>
+              <li class="option-item">
+                <input class="visually-hidden filter-input-checkbox" id="parking" type="checkbox" name="infrastructure">
+                <label for="parking"> Парковка</label>
+              </li>
+              <li class="option-item">
+                <input class="visually-hidden filter-input-checkbox" id="wi-fi" type="checkbox" name="infrastructure">
+                <label for="wi-fi">Wi-Fi</label>
+              </li>
+            </ul>
           </fieldset>
           <fieldset class="hotels-selection-list">
             <legend class="hotels-infrastructure-item">Тип жилья:</legend>
-            <label class="option">
-              <input type="checkbox" name="housing" checked>
-              Гостиница
-            </label>
-            <label class="option">
-              <input type="checkbox" name="housing" checked>
-              Мотель
-            </label>
-            <label class="option">
-              <input type="checkbox" name="housing" checked>
-              Апартаменты
-            </label>
+            <ul class="options-list">
+              <li class="option-item">
+                <input class="visually-hidden filter-input-checkbox" id="hotel" type="checkbox" name="housing" checked>
+                <label for="hotel">Гостиница</label>
+              </li>
+              <li class="option-item">
+                <input class="visually-hidden filter-input-checkbox" id="motel" type="checkbox" name="housing" checked>
+                <label for="motel">Мотель</label>
+              </li>
+              <li class="option-item">
+                <input class="visually-hidden filter-input-checkbox" id="apartments" type="checkbox" name="housing" checked>
+                <label for="apartments">Апартаменты</label>
+              </li>
+            </ul>
           </fieldset>
           <fieldset class="hotels-selection-list">
             <legend class="hotels-infrastructure-item">Стоимость в сутки (Р):</legend>
-            <div class="hotels-list-cost">
-              <label class="hotels-item-cost">
-                <input type="text" name="cost" placeholder="от 0">
-              </label>
-              <label class="hotels-item-cost">
-                <input type="text" name="cost" placeholder="до 3000">
-              </label>
+            <div class="hotels-cost-range">
+              <div class="hotels-price-controls">
+                <label class="hotels-min-price">
+                  <input type="text" name="min-price" placeholder="от 0">
+                </label>
+                <label class="hotels-max-price">
+                  <input type="text" name="max-price" placeholder="до 3000">
+                </label>
+              </div>
+              <div class="hotels-range-controls">
+                <div class="scale">
+                  <div class="bar"></div>
+                </div>
+                <div class="toggle toggle-min"></div>
+                <div class="toggle toggle-max"></div>
+              </div>
             </div>
           </fieldset>
           <button class="hotels-selection-button" type="submit">Показать</button>
@@ -82,7 +95,7 @@
           <li class="sorting-item-found">Найдено: 3</li>
           <li class="sorting-item">Сортировка:</li>
           <li class="sorting-item">
-            <a class="sorting-item-link" href="#">По цене</a>
+            <a class="sorting-item-link sorting-item-current" href="#">По цене</a>
           </li>
           <li class="sorting-item">
             <a class="sorting-item-link" href="#">По типу</a>
@@ -98,7 +111,7 @@
             </a>
           </li>
           <li>
-            <a class="sorting-control-link" href="#">
+            <a class="sorting-control-link sorting-control-current" href="#">
               <svg width="11" height="10" viewBox="0 0 11 10" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <path d="M5.5 10L11 0L0 0L5.5 10Z" fill="#CACACA" />
               </svg>

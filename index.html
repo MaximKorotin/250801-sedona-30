@@ -93,9 +93,33 @@
         <h2 class="visually-hidden">Поиск гостиницы</h2>
         <span>Заинтересовались?</span>
         <p>Укажите предполагаемые даты поездки,<br> и мы покажем вам лучшие предложения гостиниц в седоне</p>
-        <a class="hotel-search-button" href="#">
-          <span class="search-button-text">Поиск гостиницы в Седоне</span>
+        <a class="hotel-search-btn" href="#">
+          <span class="search-btn-text">Поиск гостиницы в Седоне</span>
         </a>
+        <section class="hotels-search-form">
+          <h2 class="visually-hidden">Форма поиска гостиницы</h2>
+          <form class="form-search-list" method="get" action="https://echo.htmlacademy.ru/">
+            <p class="form-search-item arrival-date">
+              <label for="arrival">Дата заезда:</label>
+              <input type="date" id="arrival" name="arrival-date" value="2017-04-24">
+            </p>
+            <p class="form-search-item departure-date">
+              <label for="departure">Дата выезда:</label>
+              <input type="date" id="departure" name="departure-date" value="2017-07-04">
+            </p>
+            <p class="form-search-item number-people">
+              <label class="adult">
+                Взрослые:
+                <input type="number" name="adult" value="2" min="0">
+              </label>
+              <label class="children">
+                Дети:
+                <input type="number" name="children" value="0" min="0">
+              </label>
+            </p>
+            <button class="hotels-search-button" type="submit">Найти</button>
+          </form>
+        </section>
       </section>
       <section class="map">
         <h2 class="visually-hidden">Как нас найти</h2>
@@ -141,35 +165,6 @@
         </section>
       </div>
     </footer>
-
-    <section class="hotels-search-form">
-      <h2 class="visually-hidden">Форма поиска гостиницы</h2>
-      <form class="form-search" method="get" action="https://echo.htmlacademy.ru/">
-        <p>
-          <label class="arrival-date">
-            Дата заезда:
-            <input type="date" name="arrival-date" value="2017-04-24">
-          </label>
-        </p>
-        <p>
-          <label class="departure-date">
-            Дата выезда:
-            <input type="date" name="departure-date" value="2017-07-04">
-          </label>
-        </p>
-        <p>
-          <label class="adult">
-            Взрослые:
-            <input type="number" name="adult" value="2" min="0">
-          </label>
-          <label class="children">
-            Дети:
-            <input type="number" name="children" value="0" min="0">
-          </label>
-        </p>
-        <button class="hotels-search-button" type="submit">Найти</button>
-      </form>
-    </section>
   </div>
 </body>
 
