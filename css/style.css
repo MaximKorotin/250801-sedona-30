@@ -181,7 +181,7 @@ a {
   grid-template-rows: 1fr;
   max-height: 509px;
   padding: 76px 0 81px 0;
-  background-color: var(--basic-dark);
+  background-color: var(--basic-light-black);
   background: url(../img/shape.svg) no-repeat center bottom,
     url(../img/background-photo.jpg);
 }
@@ -239,6 +239,7 @@ a {
 
 .feature-item {
   text-align: center;
+  padding: 46px 0 54px 0;
 }
 
 .feature-item:nth-child(2) {
@@ -247,15 +248,20 @@ a {
 
 .feature-item:nth-child(3) {
   grid-column: 1/-1;
+  padding: 0;
 }
 
 .feature-item:nth-child(4) {
   grid-column: 1/3;
 }
 
+.feature-item:nth-child(5) {
+  padding: 49px 0 51px 0;
+}
+
 .feature-item > h3 {
   margin: 0;
-  padding: 48px 125px 26px 125px;
+  padding: 0 125px 26px 125px;
   font-size: 21px;
   font-weight: 700;
   color: var(--basic-black);
@@ -383,7 +389,7 @@ a {
 .hotels-search-form {
   position: absolute;
   left: 50%;
-  margin-left: -284px;
+  transform: translateX(-50%);
   padding: 55px;
   background-color: var(--basic-white);
   box-shadow: 0px 7px 15px var(--special-light-dark);
@@ -406,9 +412,15 @@ a {
   color: var(--basic-black);
 }
 
-.form-search-item input {
+.form-search-item {
+  position: relative;
+}
+
+.form-search-item input::placeholder {
+  text-transform: uppercase;
   line-height: 26px;
   font-weight: 700;
+  color: var(--basic-black);
 }
 
 .form-search-item input:hover {
@@ -447,8 +459,66 @@ a {
   border: none;
 }
 
-.adult {
+.form-search-item .data-btn {
+  position: absolute;
+  right: 9px;
+  margin: 0;
+  padding: 0;
+  border: none;
+  background-color: transparent;
+}
+
+.data-btn:hover path {
+  fill: var(--basic-black);
+}
+
+.data-btn:focus path {
+  fill: var(--basic-blue);
+}
+
+.form-search-item .data-btn:focus {
+  outline: none;
+}
+
+.number-people .adult {
   margin-right: 45px;
+}
+
+.number-people .adult,
+.number-people .children {
+  position: relative;
+}
+
+.number-people .number-btn {
+  position: absolute;
+  margin: 0;
+  padding: 0;
+  border: none;
+  background-color: transparent;
+}
+
+.number-people .number-btn-minus {
+  top: 8px;
+  right: 89px;
+}
+
+.number-people .number-btn-plus {
+  top: 12px;
+  right: 14px;
+}
+
+.number-btn:hover rect,
+.number-btn:hover path {
+  fill: var(--basic-black);
+}
+
+.number-btn:focus rect,
+.number-btn:focus path {
+  fill: var(--basic-blue);
+}
+
+.number-people .number-btn:focus {
+  outline: none;
 }
 
 .adult input {
@@ -519,6 +589,7 @@ a {
   width: 100%;
   min-height: 217px;
   color: var(--basic-white);
+  background-color: var(--basic-dark);
   background-image: url(../img/background.jpg);
 }
 
@@ -585,7 +656,8 @@ a {
   user-select: none;
 }
 
-.filter-input-checkbox + label::before {
+.filter-input-checkbox + label::before,
+.filter-input-checkbox:hover + label::before {
   content: "";
   position: absolute;
   left: -40px;
@@ -595,16 +667,8 @@ a {
   background-image: url(../img/icons/checkbox-off.svg);
 }
 
-.filter-input-checkbox:checked + label::before {
-  content: "";
-  position: absolute;
-  left: -40px;
-  top: 0;
-  width: 27px;
-  height: 23px;
-  background-image: url(../img/icons/checkbox-on.svg);
-}
-.filter-input-checkbox:hover + label::before {
+.filter-input-checkbox:checked + label::before,
+.filter-input-checkbox:checked:hover + label::before {
   content: "";
   position: absolute;
   left: -40px;
@@ -803,6 +867,7 @@ a {
 }
 
 .sorting-item {
+  padding-top: 2px;
   font-size: 12px;
   line-height: 18px;
   color: var(--basic-black);
@@ -832,6 +897,10 @@ a {
 .sorting-item-current {
   color: var(--basic-blue);
   border: none;
+}
+
+.sorting-control {
+  padding-top: 6px;
 }
 
 .sorting-control-link:hover path {
