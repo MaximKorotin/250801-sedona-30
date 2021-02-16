@@ -926,8 +926,6 @@ a {
 }
 
 .found-hotels-list {
-  display: grid;
-  grid-template-rows: 1fr 1fr 1fr;
   margin: 0;
   padding: 0;
   list-style: none;
@@ -935,8 +933,8 @@ a {
 
 .found-hotel-item {
   display: grid;
-  grid-template-columns: auto auto 1fr;
-  grid-template-rows: 5px 45px 45px;
+  grid-template-columns: min-content auto min-content;
+  grid-template-rows: 5px auto;
   padding: 25px 73px 30px 73px;
   border-bottom: 1px solid var(--basic-light-gray);
   border-collapse: collapse;
@@ -944,18 +942,19 @@ a {
 
 .found-hotel-item .found-hotel-image {
   grid-column: 1/2;
-  grid-row: 2/4;
+  grid-row: 2/3;
 }
 
 .found-hotel-image img {
+  display: block;
   width: 135px;
   height: 90px;
   background-color: var(--basic-dark-gray);
 }
 
 .found-hotel-item .found-hotel-items {
-  display: grid;
-  grid-template-rows: auto auto auto;
+  display: flex;
+  flex-direction: column;
   grid-row: 1/4;
   padding-left: 29px;
 }
@@ -967,62 +966,6 @@ a {
   color: var(--basic-black);
 }
 
-.found-hotel-items .found-hotel-container{
-  display: grid;
-  grid-column: 1fr 1fr;
-}
-
-.found-hotel-items .found-hotel-container:nth-child(2){
-  margin-bottom: 10px;
-}
-
-.found-hotel-items .hotel-type {
-  grid-row: 2/3;
-  width: 110px;
-  margin-right: 6px;
-}
-
-.found-hotel-items .hotel-price {
-  grid-row: 2/3;
-  width: 142px;
-}
-
-.found-hotel-items .found-hotel-details {
-  display: grid;
-  grid-row: 3/4;
-  margin-right: 6px;
-}
-
-.found-hotel-items .found-hotel-reservation {
-  display: grid;
-  grid-row: 3/4;
-}
-
-.found-hotel-item .hotel-class {
-  grid-row: 2/3;
-  justify-self: end;
-  height: 17px;
-  background: url(../img/star.svg) space;
-}
-
-.hotel-class-1 {
-  width: 90px;
-}
-
-.hotel-class-2 {
-  width: 66px;
-}
-
-.hotel-class-3 {
-  width: 42px;
-}
-
-.found-hotel-item .hotel-rating {
-  grid-row: 3/4;
-  justify-self: end;
-  align-self: end;
-}
-
 .found-hotel-item .hotel-name:hover {
   color: var(--basic-blue);
 }
@@ -1032,43 +975,86 @@ a {
   opacity: 0.3;
 }
 
-.found-hotel-details .found-hotel-link {
-  justify-self: start;
-  align-self: end;
+.found-hotel-items .found-hotel-container{
+  display: flex;
+}
+
+.found-hotel-items .found-hotel-container:nth-child(2){
+  margin-top: 7px;
+  margin-bottom: 14px;
+}
+
+.found-hotel-items .hotel-type {
+  width: 110px;
+  margin-right: 6px;
+}
+
+.found-hotel-items .hotel-price {
+  width: 142px;
+}
+
+.found-hotel-container .found-hotel-details {
+  margin-right: 6px;
+}
+
+.found-hotel-link.found-hotel-details {
   padding: 3px 17px;
   font-weight: 700;
   color: var(--basic-white);
   background-color: var(--basic-blue);
 }
 
-.found-hotel-details .found-hotel-link:hover {
+.found-hotel-link:hover.found-hotel-details {
   background-color: var(--basic-dark-blue);
 }
 
-.found-hotel-details .found-hotel-link:focus {
+.found-hotel-link:focus.found-hotel-details {
   color: var(--special-extra-light);
   background-color: var(--basic-extra-blue);
 }
 
-.found-hotel-reservation .found-hotel-link {
-  justify-self: start;
-  align-self: end;
+.found-hotel-link.found-hotel-reservation {
   padding: 3px 17px;
   font-weight: 700;
   color: var(--basic-white);
   background-color: var(--basic-brown);
 }
 
-.found-hotel-reservation .found-hotel-link:hover {
+.found-hotel-link:hover.found-hotel-reservation {
   background-color: var(--basic-dark-brown);
 }
 
-.found-hotel-reservation .found-hotel-link:focus {
+.found-hotel-link:focus.found-hotel-reservation {
   color: var(--special-extra-light);
   background-color: var(--basic-extra-brown);
 }
 
-.hotel-rating {
+.found-hotel-item .hotel-rating-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: flex-end;
+  grid-row: 2/3;
+}
+
+.hotel-rating-container .hotel-class {
+  height: 17px;
+  background: url(../img/star.svg) space;
+}
+
+.hotel-rating-container .hotel-class-1 {
+  width: 90px;
+}
+
+.hotel-rating-container .hotel-class-2 {
+  width: 66px;
+}
+
+.hotel-rating-container .hotel-class-3 {
+  width: 42px;
+}
+
+.hotel-rating-container .hotel-rating {
   width: 110px;
   height: 24px;
   text-align: center;
