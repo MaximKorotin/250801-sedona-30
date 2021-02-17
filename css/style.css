@@ -182,8 +182,8 @@ a {
   max-height: 509px;
   padding: 76px 0 81px 0;
   background-color: var(--basic-light-black);
-  background: url(../img/shape.svg) no-repeat center bottom,
-    url(../img/background-photo.jpg);
+  background: url("../img/shape.svg") no-repeat center bottom,
+    url("../img/background-photo.jpg");
 }
 
 .greeting .greeting-img {
@@ -314,15 +314,15 @@ a {
 }
 
 .recommendation-item:first-child {
-  background: url(../img/icons/icon-1.svg) no-repeat center 60px;
+  background: url("../img/icons/icon-1.svg") no-repeat center 60px;
 }
 
 .recommendation-item:nth-child(2) {
-  background: url(../img/icons/icon-2.svg) no-repeat center 61px;
+  background: url("../img/icons/icon-2.svg") no-repeat center 61px;
 }
 
 .recommendation-item:last-child {
-  background: url(../img/icons/icon-3.svg) no-repeat center 55px;
+  background: url("../img/icons/icon-3.svg") no-repeat center 55px;
 }
 
 .recommendation-item h3 {
@@ -390,16 +390,13 @@ a {
   position: absolute;
   left: 50%;
   transform: translateX(-50%);
-  padding: 55px;
-  background-color: var(--basic-white);
-  box-shadow: 0px 7px 15px var(--special-light-dark);
 }
 
 .form-search-list {
-  width: 458px;
-  height: 285px;
   margin: 0;
-
+  padding: 55px;
+  background-color: var(--basic-white);
+  box-shadow: 0px 7px 15px var(--special-light-dark);
 }
 
 .form-search-list .form-search-item {
@@ -443,10 +440,20 @@ a {
   outline: none;
 }
 
+.arrival-date label,
+.departure-date label {
+  max-width: 110px;
+  text-align: left;
+}
+
 .arrival-date input {
   width: 322px;
   height: 38px;
   padding: 0 9px 0 15px;
+  font-size: 14px;
+  line-height: 26px;
+  font-weight: 700;
+  text-transform: uppercase;
   background-color: var(--basic-gray);
   border: none;
 }
@@ -455,6 +462,10 @@ a {
   width: 322px;
   height: 38px;
   padding: 0 9px 0 15px;
+  font-size: 14px;
+  line-height: 26px;
+  font-weight: 700;
+  text-transform: uppercase;
   background-color: var(--basic-gray);
   border: none;
 }
@@ -478,15 +489,6 @@ a {
 
 .form-search-item .data-btn:focus {
   outline: none;
-}
-
-.number-people .adult {
-  margin-right: 45px;
-}
-
-.number-people .adult,
-.number-people .children {
-  position: relative;
 }
 
 .number-people .number-btn {
@@ -521,22 +523,50 @@ a {
   outline: none;
 }
 
+.number-people .adult,
+.number-people .children {
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.number-people .adult {
+  margin-right: 45px;
+}
+
+.adult label {
+  width: 112px;
+  text-align: left;
+}
+
 .adult input {
   text-align: center;
   width: 114px;
   height: 38px;
-  margin-left: 38px;
   padding: 0;
+  font-size: 14px;
+  line-height: 26px;
+  font-weight: 700;
+  text-transform: uppercase;
   background-color: var(--basic-gray);
   border: none;
+}
+
+.children label {
+  width: 73px;
+  text-align: left;
 }
 
 .children input {
   text-align: center;
   width: 114px;
   height: 38px;
-  margin-left: 26px;
   padding: 0;
+  font-size: 14px;
+  line-height: 26px;
+  font-weight: 700;
+  text-transform: uppercase;
   background-color: var(--basic-gray);
   border: none;
   list-style: none;
@@ -590,7 +620,7 @@ a {
   min-height: 217px;
   color: var(--basic-white);
   background-color: var(--basic-dark);
-  background-image: url(../img/background.jpg);
+  background-image: url("../img/background.jpg");
 }
 
 .hotels-selection-form {
@@ -664,7 +694,7 @@ a {
   top: 0;
   width: 23px;
   height: 23px;
-  background-image: url(../img/icons/checkbox-off.svg);
+  background-image: url("../img/icons/checkbox-off.svg");
 }
 
 .filter-input-checkbox:checked + label::before,
@@ -675,7 +705,7 @@ a {
   top: 0;
   width: 27px;
   height: 23px;
-  background-image: url(../img/icons/checkbox-on.svg);
+  background-image: url("../img/icons/checkbox-on.svg");
 }
 
 .filter-input-checkbox:disabled + label::before {
@@ -685,7 +715,7 @@ a {
   top: 0;
   width: 23px;
   height: 23px;
-  background-image: url(../img/icons/checkbox-off-2.svg);
+  background-image: url("../img/icons/checkbox-off-2.svg");
 }
 
 .filter-input-checkbox:checked:disabled + label::before {
@@ -695,7 +725,7 @@ a {
   top: 0;
   width: 27px;
   height: 23px;
-  background-image: url(../img/icons/checkbox-on-2.svg);
+  background-image: url("../img/icons/checkbox-on-2.svg");
 }
 
 .hotels-selection-form .option-item:last-child {
@@ -1039,7 +1069,7 @@ a {
 
 .hotel-rating-container .hotel-class {
   height: 17px;
-  background: url(../img/star.svg) space;
+  background: url("../img/star.svg") space;
 }
 
 .hotel-rating-container .hotel-class-1 {

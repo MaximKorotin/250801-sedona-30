@@ -22,7 +22,7 @@
           <li><a href="#">карта штата</a></li>
           <li><a href="catalog.html">гостиницы</a></li>
         </ul>
-        <a class="main-header-logo" href="#">
+        <a class="main-header-logo">
           <img src="img/logo.svg" width="138" height="70" alt="Логотип городка Седона">
         </a>
       </nav>
@@ -93,7 +93,7 @@
         <h2 class="visually-hidden">Поиск гостиницы</h2>
         <span>Заинтересовались?</span>
         <p>Укажите предполагаемые даты поездки,<br> и мы покажем вам лучшие предложения гостиниц в седоне</p>
-        <a class="hotel-search-btn" href="#">
+        <a class="hotel-search-btn" href="form.html">
           <span class="search-btn-text">Поиск гостиницы в Седоне</span>
         </a>
         <section class="hotels-search-form">
@@ -121,10 +121,8 @@
             </div>
             <div class="form-search-item number-people">
               <div class="adult">
-                <label>
-                  Взрослые:
-                  <input type="text" name="adult" placeholder="2">
-                </label>
+                <label for="adult">Взрослые:</label>
+                <input type="text" id="adult" name="adult" placeholder="2">
                 <button class="number-btn number-btn-minus" type="button">
                   <svg width="12" height="3" viewBox="0 0 12 3" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <rect width="12" height="3" fill="#A9A9A9"/>
@@ -137,10 +135,8 @@
                 </button>
               </div>
               <div class="children">
-                <label>
-                  Дети:
-                  <input type="text" name="children" placeholder="0">
-                </label>
+                <label for="children">Дети:</label>
+                <input type="text" id="children" name="children" placeholder="0">
                 <button class="number-btn number-btn-minus" type="button">
                   <svg width="12" height="3" viewBox="0 0 12 3" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <rect width="12" height="3" fill="#A9A9A9"/>
