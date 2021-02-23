@@ -20,6 +20,7 @@ searchLink.addEventListener("click", function (evt) {
   if (searchModal.classList.contains("hotels-search-form-show")) {
     evt.preventDefault();
     searchModal.classList.remove("hotels-search-form-show");
+    searchModal.classList.remove("hotels-search-form-error");
   } else {
     evt.preventDefault();
     searchModal.classList.add("hotels-search-form-show");
@@ -36,6 +37,9 @@ searchLink.addEventListener("click", function (evt) {
 searchForm.addEventListener("submit", function (evt) {
   if (!searchArrival.value || !searcDeparture.value || !searchAdult.value || !searchChildren.value) {
     evt.preventDefault();
+    searchModal.classList.remove("hotels-search-form-error");
+    searchModal.offsetWidth = searchModal.offsetWidth;
+    searchModal.classList.add("hotels-search-form-error");
   } else {
     if (isStorageSupport) {
       localStorage.setItem("adult", searchAdult.value);
