@@ -52,7 +52,6 @@
 
 .page-body {
   background-color: var(--basic-gray);
-  padding: 0 5px;
 }
 
 .container {
@@ -182,7 +181,7 @@ a {
   grid-template-rows: 1fr;
   max-height: 509px;
   padding: 76px 0 81px 0;
-  background: url("../img/shape.svg") no-repeat bottom,
+  background: url("../img/shape.svg") no-repeat 0 452px,
     var(--basic-light-black) url("../img/background-photo.jpg");
 }
 
@@ -289,6 +288,10 @@ a {
 .feature-item:first-child h3,
 .feature-item:nth-child(5) h3 {
   color: var(--basic-white);
+}
+
+.feature-item:nth-child(5) h3 {
+  padding: 0 125px 26px 125px;
 }
 
 .feature-item-image {
