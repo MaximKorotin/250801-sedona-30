@@ -52,6 +52,7 @@
 
 .page-body {
   background-color: var(--basic-gray);
+  padding: 0 5px;
 }
 
 .container {
@@ -181,11 +182,12 @@ a {
   grid-template-rows: 1fr;
   max-height: 509px;
   padding: 76px 0 81px 0;
-  background: url("../img/shape.svg") no-repeat center bottom,
+  background: url("../img/shape.svg") no-repeat bottom,
     var(--basic-light-black) url("../img/background-photo.jpg");
 }
 
 .greeting .greeting-img {
+  display: block;
   width: 457px;
   height: 351px;
   justify-self: center;
@@ -261,7 +263,7 @@ a {
 
 .feature-item > h3 {
   margin: 0;
-  padding: 0 125px 26px 125px;
+  padding: 0 122px 26px 122px;
   font-size: 21px;
   font-weight: 700;
   color: var(--basic-black);
@@ -389,26 +391,27 @@ a {
 /* Hotels search form */
 
 .hotels-search-form {
+  position: relative;
   display: none;
-  position: absolute;
-  left: 50%;
-  transform: translateX(-50%);
-  animation: departure 0.5s;
-}
-
-.hotels-search-form-show {
-  display: block;
-}
-
-.hotels-search-form-error {
-  animation: shake 0.5s;
 }
 
 .form-search-list {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
   margin: 0;
   padding: 55px;
   background-color: var(--basic-white);
   box-shadow: 0px 7px 15px var(--special-light-dark);
+  animation: departure 0.5s;
+}
+
+.form-search-list-show {
+  display: block;
+}
+
+.form-search-list-error {
+  animation: shake 0.5s;
 }
 
 .form-search-container {
@@ -435,6 +438,22 @@ a {
   font-weight: 700;
   color: var(--basic-black);
 }
+
+.form-search-item input:focus::placeholder {
+  color: transparent;
+}
+
+.form-search-item input::-moz-placeholder {
+  vertical-align: middle;
+  line-height: 38px;
+  color: var(--basic-black);
+  opacity: 1;
+}
+
+.form-search-item input:focus::-moz-placeholder {
+  color: transparent;
+}
+
 
 .form-search-item input:hover {
   background-color: var(--basic-dark-light);
@@ -1254,19 +1273,19 @@ a {
 @keyframes shake {
   0%,
   100% {
-    transform: translateX(-50%);
+    transform: translateX(0);
   }
   10%,
   30%,
   50%,
   70%,
   90% {
-    transform: translateX(-51%);
+    transform: translateX(-5px);
   }
   20%,
   40%,
   60%,
   80% {
-    transform: translateX(-49%);
+    transform: translateX(5px);
   }
 }

@@ -4,42 +4,45 @@ const searchForm = searchModal.querySelector(".form-search-list");
 const searchArrival = searchModal.querySelector(".form-search-arrival");
 const searcDeparture = searchModal.querySelector(".form-search-departure");
 const searchAdult = searchModal.querySelector(".form-search-adult");
-const searchChildren = searchModal.querySelector(".hotels-search-children");
+const searchChildren = searchModal.querySelector(".form-search-children");
 
 let isStorageSupport = true;
-let storage = "";
+let storageAdult = "";
+let storageChildren = "";
 
 try {
-  storage = localStorage.getItem("adult");
-  storage = localStorage.getItem("children");
+  storageAdult = localStorage.getItem("adult");
+  storageChildren = localStorage.getItem("children");
 } catch (err) {
   isStorageSupport = false;
 }
 
 searchLink.addEventListener("click", function (evt) {
-  if (searchModal.classList.contains("hotels-search-form-show")) {
+  if (searchModal.classList.contains("form-search-list-show")) {
     evt.preventDefault();
-    searchModal.classList.remove("hotels-search-form-show");
-    searchModal.classList.remove("hotels-search-form-error");
+    searchModal.classList.remove("form-search-list-show");
+    searchModal.classList.remove("form-search-list-error");
   } else {
     evt.preventDefault();
-    searchModal.classList.add("hotels-search-form-show");
+    searchModal.classList.add("form-search-list-show");
+    searchArrival.focus();
 
-    if (storage) {
-      searchAdult.value = storage;
-      searchChildren.value = storage;
+    if (storageAdult) {
+      searchAdult.value = storageAdult;
     }
 
-    searchArrival.focus();
+    if (storageChildren) {
+      searchChildren.value = storageChildren;
+    }
   }
 });
 
 searchForm.addEventListener("submit", function (evt) {
   if (!searchArrival.value || !searcDeparture.value || !searchAdult.value || !searchChildren.value) {
     evt.preventDefault();
-    searchModal.classList.remove("hotels-search-form-error");
+    searchModal.classList.remove("form-search-list-error");
     searchModal.offsetWidth = searchModal.offsetWidth;
-    searchModal.classList.add("hotels-search-form-error");
+    searchModal.classList.add("form-search-list-error");
   } else {
     if (isStorageSupport) {
       localStorage.setItem("adult", searchAdult.value);
