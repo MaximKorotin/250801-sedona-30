@@ -386,10 +386,15 @@ a {
 /* Hotels search form */
 
 .hotels-search-form {
+  display: none;
   position: absolute;
   left: 50%;
   transform: translateX(-50%);
-  z-index: 1;
+  animation: departure 0.6s;
+}
+
+.hotels-search-form-show {
+  display: block;
 }
 
 .form-search-list {
@@ -1225,4 +1230,16 @@ a {
 
 .footer-copyright-link:focus path {
   fill: var(--basic-very-light-dark);
+}
+
+
+/* Animation popup */
+
+@keyframes departure {
+  0% {
+    transform: translate(-50%, -100%);
+  }
+  100% {
+    transform: translate(-50%, 0);
+  }
 }
