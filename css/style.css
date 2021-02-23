@@ -290,10 +290,6 @@ a {
   color: var(--basic-white);
 }
 
-.feature-item:nth-child(5) h3 {
-  padding: 0 125px 26px 125px;
-}
-
 .feature-item-image {
   margin: 0;
   padding: 0;
