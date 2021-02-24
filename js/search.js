@@ -10,6 +10,8 @@ let isStorageSupport = true;
 let storageAdult = "";
 let storageChildren = "";
 
+searchModal.classList.add("form-search-list-show")
+
 try {
   storageAdult = localStorage.getItem("adult");
   storageChildren = localStorage.getItem("children");
