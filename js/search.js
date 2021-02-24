@@ -17,6 +17,14 @@ try {
   isStorageSupport = false;
 }
 
+if (storageAdult) {
+  searchAdult.value = storageAdult;
+}
+
+if (storageChildren) {
+  searchChildren.value = storageChildren;
+}
+
 searchLink.addEventListener("click", function (evt) {
   if (searchModal.classList.contains("form-search-list-show")) {
     evt.preventDefault();
@@ -26,14 +34,6 @@ searchLink.addEventListener("click", function (evt) {
     evt.preventDefault();
     searchModal.classList.add("form-search-list-show");
     searchArrival.focus();
-
-    if (storageAdult) {
-      searchAdult.value = storageAdult;
-    }
-
-    if (storageChildren) {
-      searchChildren.value = storageChildren;
-    }
   }
 });
 

@@ -364,6 +364,7 @@ a {
 
 .hotel-search-btn {
   display: inline-block;
+  vertical-align: middle;
   padding: 30px 140px;
   background-color: var(--basic-brown);
 }
@@ -391,7 +392,7 @@ a {
 
 .hotels-search-form {
   position: relative;
-  display: none;
+  display: block;
 }
 
 .form-search-list {
@@ -406,7 +407,7 @@ a {
 }
 
 .form-search-list-show {
-  display: block;
+  display: none;
 }
 
 .form-search-list-error {
@@ -777,6 +778,7 @@ a {
 .hotels-price-controls {
   position: relative;
   display: inline-block;
+  vertical-align: middle;
   width: 313px;
   height: 32px;
   border: 2px solid var(--basic-white);
@@ -918,6 +920,7 @@ a {
 
 .sorting-list li {
   display: inline-block;
+  vertical-align: middle;
 }
 
 .sorting-list li:nth-child(1) {
